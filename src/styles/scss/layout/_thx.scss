@@ -1,0 +1,38 @@
+.thx {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 0 2rem;
+  justify-content: center;
+  text-align: center;
+  gap: 2rem;
+
+  .thx__title {
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke: 2px black;
+    position: relative;
+
+    &::after {
+      content: "";
+      width: 92%;
+      height: 24px;
+      background-color: #f9f871;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, 0);
+      z-index: -1;
+    }
+  }
+
+  .thx__btn {
+    border: none;
+    padding: 1.2rem;
+    border-radius: 25px;
+    background-color: #c05b79;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+      rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+}

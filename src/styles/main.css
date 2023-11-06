@@ -1,13 +1,36 @@
 @import url("https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@400;700&display=swap");
 * {
   box-sizing: border-box;
-  font-family: "Playpen Sans", cursive;
+  font-family: "Playpen Sans";
 }
 
 body {
   max-width: 767px;
   margin: 0 auto;
   background-color: #32325d;
+  height: 100vh;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='767' height='560' preserveAspectRatio='none' viewBox='0 0 767 560'%3e%3cg clip-path='url(%26quot%3b%23SvgjsClipPath5151%26quot%3b)' fill='none'%3e%3crect width='767' height='560' x='0' y='0' fill='%2332325d'%3e%3c/rect%3e%3ccircle r='38.705' cx='43.81' cy='481.47' fill='url(%26quot%3b%23SvgjsLinearGradient5152%26quot%3b)'%3e%3c/circle%3e%3ccircle r='20.475' cx='88.91' cy='85.48' fill='url(%26quot%3b%23SvgjsLinearGradient5153%26quot%3b)'%3e%3c/circle%3e%3ccircle r='20.72' cx='415.09' cy='267.25' fill='url(%26quot%3b%23SvgjsLinearGradient5154%26quot%3b)'%3e%3c/circle%3e%3ccircle r='49.585' cx='692.49' cy='352.02' fill='url(%26quot%3b%23SvgjsLinearGradient5155%26quot%3b)'%3e%3c/circle%3e%3ccircle r='22.155' cx='461.67' cy='467.7' fill='url(%26quot%3b%23SvgjsLinearGradient5156%26quot%3b)'%3e%3c/circle%3e%3ccircle r='46.59' cx='109.01' cy='234.61' fill='url(%26quot%3b%23SvgjsLinearGradient5157%26quot%3b)'%3e%3c/circle%3e%3ccircle r='16.02' cx='233.95' cy='180.89' fill='url(%26quot%3b%23SvgjsLinearGradient5158%26quot%3b)'%3e%3c/circle%3e%3ccircle r='50.16' cx='310.05' cy='154.74' fill='url(%26quot%3b%23SvgjsLinearGradient5159%26quot%3b)'%3e%3c/circle%3e%3c/g%3e%3cdefs%3e%3cclipPath id='SvgjsClipPath5151'%3e%3crect width='767' height='560' x='0' y='0'%3e%3c/rect%3e%3c/clipPath%3e%3clinearGradient x1='-33.599999999999994' y1='481.47' x2='121.22' y2='481.47' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient5152'%3e%3cstop stop-color='%2384b6e0' offset='0.1'%3e%3c/stop%3e%3cstop stop-color='rgba(250%2c 90%2c 141%2c 1)' offset='0.82'%3e%3c/stop%3e%3c/linearGradient%3e%3clinearGradient x1='129.86' y1='44.53' x2='47.959999999999994' y2='126.43' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient5153'%3e%3cstop stop-color='%23e298de' offset='0.1'%3e%3c/stop%3e%3cstop stop-color='rgba(186%2c 74%2c 172%2c 1)' offset='0.84'%3e%3c/stop%3e%3c/linearGradient%3e%3clinearGradient x1='373.65' y1='267.25' x2='456.53' y2='267.25' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient5154'%3e%3cstop stop-color='%2384b6e0' offset='0.1'%3e%3c/stop%3e%3cstop stop-color='rgba(250%2c 90%2c 141%2c 1)' offset='0.82'%3e%3c/stop%3e%3c/linearGradient%3e%3clinearGradient x1='791.6600000000001' y1='252.84999999999997' x2='593.32' y2='451.18999999999994' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient5155'%3e%3cstop stop-color='%23e298de' offset='0.1'%3e%3c/stop%3e%3cstop stop-color='rgba(186%2c 74%2c 172%2c 1)' offset='0.84'%3e%3c/stop%3e%3c/linearGradient%3e%3clinearGradient x1='417.36' y1='467.7' x2='505.98' y2='467.7' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient5156'%3e%3cstop stop-color='rgba(171%2c 60%2c 81%2c 1)' offset='0.19'%3e%3c/stop%3e%3cstop stop-color='%234f4484' offset='0.9'%3e%3c/stop%3e%3c/linearGradient%3e%3clinearGradient x1='15.829999999999998' y1='234.61' x2='202.19' y2='234.61' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient5157'%3e%3cstop stop-color='%23ab3c51' offset='0.1'%3e%3c/stop%3e%3cstop stop-color='rgba(255%2c 192%2c 90%2c 1)' offset='0.58'%3e%3c/stop%3e%3c/linearGradient%3e%3clinearGradient x1='201.91' y1='180.89' x2='265.99' y2='180.89' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient5158'%3e%3cstop stop-color='%23ab3c51' offset='0.1'%3e%3c/stop%3e%3cstop stop-color='rgba(255%2c 192%2c 90%2c 1)' offset='0.58'%3e%3c/stop%3e%3c/linearGradient%3e%3clinearGradient x1='410.37' y1='154.74' x2='209.73000000000002' y2='154.74' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient5159'%3e%3cstop stop-color='rgba(50%2c 50%2c 93%2c 1)' offset='0.2'%3e%3c/stop%3e%3cstop stop-color='rgba(255%2c 136%2c 107%2c 1)' offset='0.9'%3e%3c/stop%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");
+}
+
+button {
+  border: solid 2px rgba(182, 182, 201, 0.3);
+  background-color: rgba(143, 143, 167, 0.3);
+  backdrop-filter: blur(10px);
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4rem;
+  padding: 0 2rem;
+}
+.main .main__btn {
+  padding: 1.7rem;
+  border-radius: 30px;
+  font-size: 2rem;
 }
 
 /*# sourceMappingURL=main.css.map */

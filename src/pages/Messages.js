@@ -1,9 +1,10 @@
+import { Link } from "react-router-dom";
 import { collection, query, onSnapshot } from "firebase/firestore";
 import { db } from "../firebase";
 import { useState } from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faComment } from "@fortawesome/free-solid-svg-icons";
+import { faHouse, faComment } from "@fortawesome/free-solid-svg-icons";
 
 const Messages = () => {
   const [messageList, setMessageList] = useState([]);
@@ -18,6 +19,11 @@ const Messages = () => {
 
   return (
     <div className="messasges">
+      <div className="messages__link">
+        <Link to={`/`} className="messages__btn">
+          <FontAwesomeIcon icon={faHouse} className="messages__icon" />
+        </Link>
+      </div>
       {messageList.map((message) => (
         <div className="messages__container">
           <div className="messages__top">

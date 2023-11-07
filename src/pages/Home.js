@@ -9,6 +9,9 @@ function Home({ datas }) {
           <BtnTransparent prop={data.lan} />
         </Link>
       ))}
+      <Link to={`/messages`}>
+        <BtnTransparent prop={`📫`} />
+      </Link>
     </div>
   );
 }

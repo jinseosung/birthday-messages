@@ -70,6 +70,7 @@ body {
   margin-bottom: 1.7rem;
 }
 .message .message__nameContainer .message__nameInput {
+  margin-left: 0.4rem;
   border: none;
   outline: none;
   text-align: center;

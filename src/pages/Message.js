@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { collection, addDoc } from "firebase/firestore";
 import { db } from "../firebase";
+import { v4 as uuidv4 } from "uuid";
 
 const Message = ({ datas }) => {
   const [selectedData, setSelectedData] = useState({});
@@ -53,6 +54,7 @@ const Message = ({ datas }) => {
 
     try {
       await addDoc(collection(db, "messages"), {
+        id: uuidv4(),
         name: name,
         message: leavedMessage,
         dateObj,

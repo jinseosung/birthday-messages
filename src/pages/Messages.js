@@ -25,7 +25,7 @@ const Messages = () => {
         </Link>
       </div>
       {messageList.map((message) => (
-        <div className="messages__container">
+        <div key={message.id} className="messages__container">
           <div className="messages__top">
             <div className="messages__title">
               <FontAwesomeIcon icon={faComment} className="messages__icon" />

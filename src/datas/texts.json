@@ -6,13 +6,13 @@
     "message": {
       "title": "메세지를 남겨주세요",
       "from": "from",
-      "placeholder": "누구세요?",
+      "placeholder": "누구에용?",
       "btn": "진서에게 보내기 💌"
     },
 
     "thx": {
       "title": "감사합니다 💖",
-      "btn": "남긴 메세지 확인하기 📫"
+      "btn": "메세지 보러가기 📫"
     }
   },
   {
@@ -20,9 +20,9 @@
     "lanCode": "fr",
     "lan": "Français",
     "message": {
-      "title": "Laissez un message",
+      "title": "Écris-moi librement",
       "from": "De",
-      "placeholder": "Qui êtes-vous?",
+      "placeholder": "Qui es-tu?",
       "btn": "Envoyer à Jinseo 💌"
     },
 

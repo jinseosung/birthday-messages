@@ -63,7 +63,7 @@ const Message = ({ datas }) => {
       console.error(e);
     }
 
-    navigate(`/thx/${lanId}`);
+    navigate(`${process.env.PUBLIC_URL}/thx/${lanId}`);
   };
 
   if (message) {

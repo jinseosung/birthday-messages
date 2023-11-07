@@ -8,19 +8,19 @@ import datas from "./datas/texts.json";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: `${process.env.PUBLIC_URL}/`,
     element: <Home datas={datas} />,
   },
   {
-    path: "message/:languageId",
+    path: `${process.env.PUBLIC_URL}/message/:languageId`,
     element: <Message datas={datas} />,
   },
   {
-    path: "thx/:languageId",
+    path: `${process.env.PUBLIC_URL}/thx/:languageId`,
     element: <Thx datas={datas} />,
   },
   {
-    path: "messages",
+    path: `${process.env.PUBLIC_URL}/messages`,
     element: <Messages />,
   },
 ]);

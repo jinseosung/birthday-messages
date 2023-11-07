@@ -16,7 +16,7 @@ const Thx = ({ datas }) => {
     return (
       <div className="thx">
         <h1 className="thx__title">{thx.title}</h1>
-        <Link to={`/messages`}>
+        <Link to={`${process.env.PUBLIC_URL}/messages`}>
           <button className="thx__btn">{thx.btn}</button>
         </Link>
       </div>

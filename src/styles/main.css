@@ -93,6 +93,55 @@ body {
   font-size: 1rem;
 }
 
+.messasges {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 1.2rem;
+  margin-bottom: 2rem;
+}
+.messasges .messages__container {
+  min-height: 14rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  border: none;
+  background-color: rgba(190, 190, 221, 0.3);
+  backdrop-filter: blur(10px);
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+.messasges .messages__container .messages__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 15px 15px 0 0;
+}
+.messasges .messages__container .messages__top .messages__title {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+.messasges .messages__container .messages__top .messages__title .messages__icon {
+  padding: 0.5rem;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 1.1rem;
+  background-color: #c05b79;
+}
+.messasges .messages__container .messages__top .messages__title .messages__name {
+  font-size: 1.2rem;
+}
+.messasges .messages__container .messages__top .messages__date {
+  font-size: 0.9rem;
+}
+.messasges .messages__container .messages__bottom {
+  padding: 1rem;
+  font-size: 1.1rem;
+}
+
 .thx {
   height: 100vh;
   display: flex;

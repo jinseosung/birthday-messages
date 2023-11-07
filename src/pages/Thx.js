@@ -16,7 +16,7 @@ const Thx = ({ datas }) => {
     return (
       <div className="thx">
         <h1 className="thx__title">{thx.title}</h1>
-        <Link to="/">
+        <Link to={`/messages`}>
           <button className="thx__btn">{thx.btn}</button>
         </Link>
       </div>

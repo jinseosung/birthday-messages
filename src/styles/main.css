@@ -207,6 +207,7 @@ body {
   font-size: 2rem;
   width: 100%;
   cursor: pointer;
+  color: black;
   border: solid 2px rgba(182, 182, 201, 0.3);
   background-color: rgba(190, 190, 221, 0.3);
   backdrop-filter: blur(10px);

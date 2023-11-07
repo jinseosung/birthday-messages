@@ -1,14 +1,14 @@
 import { Link } from "react-router-dom";
+import BtnTransparent from "../components/BtnTransparent";
 
-function Home() {
+function Home({ datas }) {
   return (
     <div className="home">
-      <Link to="/message/kr">
-        <button className="home__btn home__btn--ko">한국어</button>
-      </Link>
-      <Link to="/message/fr">
-        <button className="home__btn home__btn--fr">Français</button>
-      </Link>
+      {datas.map((data) => (
+        <Link key={data.id} to={`/message/${data.lanCode}`}>
+          <BtnTransparent prop={data.lan} />
+        </Link>
+      ))}
     </div>
   );
 }

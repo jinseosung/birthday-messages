@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "lanCode": "kr",
+    "lan": "한국어",
+    "home": {
+      "title": "메세지를 남겨주세요",
+      "from": "from",
+      "placeholder": "누구세요?",
+      "btn": "진서에게 보내기 💌"
+    },
+
+    "thx": {
+      "title": "감사합니다 💖",
+      "btn": "남긴 메세지 확인하기 📫"
+    }
+  },
+  {
+    "id": 2,
+    "lanCode": "fr",
+    "lan": "Français",
+    "home": {
+      "title": "Laissez un message",
+      "from": "De",
+      "placeholder": "Qui êtes-vous?",
+      "btn": "Envoyer à Jinseo 💌"
+    },
+
+    "thx": {
+      "title": "Merci beaucoup 💖",
+      "btn": "Aller voir mon message 📫"
+    }
+  }
+]

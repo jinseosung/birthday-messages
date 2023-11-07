@@ -1,23 +1,27 @@
+import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 
-const Thx = () => {
+const Thx = ({ datas }) => {
+  const [selectedData, setSelectedData] = useState({});
+  const { thx } = selectedData || {};
   const params = useParams();
   const lanId = params.languageId;
 
-  return (
-    <div className="thx">
-      <h1 className="thx__title">
-        {lanId === "kr" ? "감사합니다 💖" : "Merci beaucoup 💖"}
-      </h1>
-      <Link to="/">
-        <button className="thx__btn">
-          {lanId === "kr"
-            ? "남긴 메세지 확인하기 📫"
-            : "Aller voir mon message 📫"}
-        </button>
-      </Link>
-    </div>
-  );
+  useEffect(() => {
+    const lanData = datas.find((data) => data.lanCode === lanId);
+    setSelectedData(lanData);
+  }, [datas, lanId]);
+
+  if (thx) {
+    return (
+      <div className="thx">
+        <h1 className="thx__title">{thx.title}</h1>
+        <Link to="/">
+          <button className="thx__btn">{thx.btn}</button>
+        </Link>
+      </div>
+    );
+  }
 };
 
 export default Thx;

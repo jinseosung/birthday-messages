@@ -3,7 +3,7 @@
     "id": 1,
     "lanCode": "kr",
     "lan": "한국어",
-    "home": {
+    "message": {
       "title": "메세지를 남겨주세요",
       "from": "from",
       "placeholder": "누구세요?",
@@ -19,7 +19,7 @@
     "id": 2,
     "lanCode": "fr",
     "lan": "Français",
-    "home": {
+    "message": {
       "title": "Laissez un message",
       "from": "De",
       "placeholder": "Qui êtes-vous?",

@@ -7,7 +7,7 @@ const Message = ({ datas }) => {
   const [selectedData, setSelectedData] = useState({});
   const [leavedMessage, setLeavedMessage] = useState("");
   const [name, setName] = useState("");
-  const { home } = selectedData || {};
+  const { message } = selectedData || {};
   const params = useParams();
   const lanId = params.languageId;
   const navigate = useNavigate();
@@ -64,10 +64,10 @@ const Message = ({ datas }) => {
     navigate(`/thx/${lanId}`);
   };
 
-  if (home) {
+  if (message) {
     return (
       <div className="message">
-        <h1 className="message__title">{home.title}</h1>
+        <h1 className="message__title">{message.title}</h1>
         <form onSubmit={handleSubmit}>
           <textarea
             onChange={onChange}
@@ -75,16 +75,16 @@ const Message = ({ datas }) => {
             required
           ></textarea>
           <div className="message__nameContainer">
-            <label>{home.from}</label>
+            <label>{message.from}</label>
             <input
               onChange={onChange}
               className="message__nameInput"
-              placeholder={home.placeholder}
+              placeholder={message.placeholder}
               required
             />
           </div>
           <button className="message__btn" type="submit">
-            {home.btn}
+            {message.btn}
           </button>
         </form>
       </div>

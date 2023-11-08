@@ -3,6 +3,7 @@ import Home from "./pages/Home";
 import Message from "./pages/Message";
 import Messages from "./pages/Messages";
 import Thx from "./pages/Thx";
+import Quiz from "./pages/Quiz";
 import "./styles/main.css";
 import datas from "./datas/texts.json";
 
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
   {
     path: `${process.env.PUBLIC_URL}/messages`,
     element: <Messages />,
+  },
+  {
+    path: `${process.env.PUBLIC_URL}/quiz`,
+    element: <Quiz />,
   },
 ]);
 

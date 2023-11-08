@@ -35,7 +35,8 @@
   .quiz__btn {
     @include rose-btn;
     border-radius: 30px;
-    padding: 1rem 3rem;
+    padding: 0.4rem 3rem 0.8rem 3rem;
+    font-size: 1.3rem;
 
     .quiz__icon {
       font-size: 1.2rem;

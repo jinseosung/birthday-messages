@@ -1,14 +1,14 @@
-import { Link } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import questions from "../datas/quiz.json";
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 const Quiz = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState("");
   const [score, setScore] = useState(0);
+  const navigate = useNavigate();
+  const params = useParams();
+  const name = params.name;
 
   const handleNextQuestion = () => {
     const currentQuestion = questions[currentQuestionIndex];
@@ -21,7 +21,7 @@ const Quiz = () => {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
       setSelectedAnswer("");
     } else {
-      alert("Quiz completed!");
+      navigate(`${process.env.PUBLIC_URL}/quizmain`);
     }
   };
 
@@ -47,10 +47,9 @@ const Quiz = () => {
       </ul>
       {selectedAnswer && (
         <button onClick={handleNextQuestion} className="quiz__btn">
-          <FontAwesomeIcon icon={faArrowRight} className="quiz__icon" />
+          👉
         </button>
       )}
-      <Link to={`/`}></Link>
     </div>
   );
 };

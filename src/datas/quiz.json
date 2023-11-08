@@ -1,8 +1,8 @@
 [
   {
     "question": "En quelle année Jinseo est-elle venue en France ?",
-    "answer": [2013, 2014, 2015, 2016],
-    "correctAnswer": 2015
+    "answer": ["2013", "2014", "2015", "2016"],
+    "correctAnswer": "2015"
   },
   {
     "question": "Combien de frères et sœurs a-t-elle ?",
@@ -16,8 +16,8 @@
   },
   {
     "question": "Combien d'animaux de compagnie a-t-elle eu depuis qu'elle vit en France ?",
-    "answer": [0, 1, 2, 3],
-    "correctAnswer": 3
+    "answer": ["0", "1", "2", "3"],
+    "correctAnswer": "3"
   },
   {
     "question": "Quel type d'alcool adore-t-elle ?",
@@ -26,7 +26,7 @@
   },
   {
     "question": "Combien mesure-t-elle ?",
-    "answer": [162, 164, 166, 168],
-    "correctAnswer": 166
+    "answer": ["162", "164", "166", "168"],
+    "correctAnswer": "166"
   }
 ]

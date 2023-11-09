@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { collection, query, onSnapshot } from "firebase/firestore";
+import { collection, query, orderBy, onSnapshot } from "firebase/firestore";
 import { db } from "../firebase";
 import { useState } from "react";
 
@@ -8,7 +8,7 @@ import { faHouse, faComment } from "@fortawesome/free-solid-svg-icons";
 
 const Messages = () => {
   const [messageList, setMessageList] = useState([]);
-  const q = query(collection(db, "messages"));
+  const q = query(collection(db, "messages"), orderBy("dateObj", "desc"));
   onSnapshot(q, (querySnapshot) => {
     const messages = [];
     querySnapshot.forEach((doc) => {

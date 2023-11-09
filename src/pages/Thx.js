@@ -19,6 +19,9 @@ const Thx = ({ datas }) => {
         <Link to={`${process.env.PUBLIC_URL}/messages`}>
           <button className="thx__btn">{thx.btn}</button>
         </Link>
+        <Link to={`${process.env.PUBLIC_URL}/quizmain`}>
+          <button className="thx__btn">{thx.quiz}</button>
+        </Link>
       </div>
     );
   }

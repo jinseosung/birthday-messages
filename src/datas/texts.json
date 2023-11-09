@@ -12,7 +12,8 @@
 
     "thx": {
       "title": "감사합니다 💖",
-      "btn": "메세지 보러가기 📫"
+      "btn": "메세지 보러가기 📫",
+      "quiz": "퀴즈 풀러 가기 🔍"
     }
   },
   {
@@ -28,7 +29,8 @@
 
     "thx": {
       "title": "Merci beaucoup 💖",
-      "btn": "Aller voir mon message 📫"
+      "btn": "Aller voir mon message 📫",
+      "quiz": "Quiz 🔍"
     }
   }
 ]

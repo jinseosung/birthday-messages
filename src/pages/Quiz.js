@@ -15,7 +15,7 @@ const Quiz = () => {
 
   const saveScore = async (num) => {
     try {
-      await addDoc(collection(db, "quiz"), {
+      await addDoc(collection(db, "score"), {
         id: uuidv4(),
         name: name,
         score: score + num,

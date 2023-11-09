@@ -1,5 +1,8 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { collection, addDoc } from "firebase/firestore";
+import { db } from "../firebase";
+import { v4 as uuidv4 } from "uuid";
 import questions from "../datas/quiz.json";
 
 const Quiz = () => {
@@ -10,18 +13,35 @@ const Quiz = () => {
   const params = useParams();
   const name = params.name;
 
+  const saveScore = async (num) => {
+    try {
+      await addDoc(collection(db, "quiz"), {
+        id: uuidv4(),
+        name: name,
+        score: score + num,
+      });
+    } catch (e) {
+      console.error(e);
+    }
+  };
+
   const handleNextQuestion = () => {
     const currentQuestion = questions[currentQuestionIndex];
 
-    if (selectedAnswer === currentQuestion.correctAnswer) {
-      setScore(score + 1);
-    }
-
     if (currentQuestionIndex < questions.length - 1) {
+      if (selectedAnswer === currentQuestion.correctAnswer) {
+        setScore(score + 1);
+      }
       setCurrentQuestionIndex(currentQuestionIndex + 1);
       setSelectedAnswer("");
     } else {
-      navigate(`${process.env.PUBLIC_URL}/quizmain`);
+      if (selectedAnswer === currentQuestion.correctAnswer) {
+        saveScore(1)
+      } else {
+        saveScore(0)
+      }
+
+      navigate(`${process.env.PUBLIC_URL}/quizthx`);
     }
   };
 

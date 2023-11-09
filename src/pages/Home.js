@@ -5,13 +5,13 @@ function Home({ datas }) {
   return (
     <div className="home">
       <Link to={`${process.env.PUBLIC_URL}/lan`}>
-        <BtnTransparent prop={"📫"} />
+        <BtnTransparent prop={"💌"} />
       </Link>
       <Link to={`${process.env.PUBLIC_URL}/quizmain`}>
         <BtnTransparent prop={"🔍"} />
       </Link>
       <Link to={`${process.env.PUBLIC_URL}/messages`}>
-        <BtnTransparent prop={`📫`} />
+        <BtnTransparent prop={"📫"} />
       </Link>
     </div>
   );

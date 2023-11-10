@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import BtnTransparent from "../components/BtnTransparent";
 
-function Home({ datas }) {
+const Home = ({ datas }) => {
   return (
     <div className="home">
       <Link to={`${process.env.PUBLIC_URL}/lan`}>
@@ -15,6 +15,6 @@ function Home({ datas }) {
       </Link>
     </div>
   );
-}
+};
 
 export default Home;

@@ -1,5 +1,3 @@
-const BtnTransparent = ({ prop }) => {
+export default function BtnTransparent({ prop }) {
   return <button className="btnTransparent">{prop}</button>;
-};
-
-export default BtnTransparent;
+}

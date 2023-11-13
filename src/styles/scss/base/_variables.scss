@@ -69,7 +69,37 @@
 
 @keyframes show-from-bottom {
   from {
-    transform: translateY(60%);
+    transform: translateY(30%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes show-from-bottom-delay-60 {
+  from {
+    transform: translateY(30%);
+    opacity: 0;
+  }
+  60% {
+    transform: translateY(30%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes show-from-bottom-delay-80 {
+  from {
+    transform: translateY(30%);
+    opacity: 0;
+  }
+  80% {
+    transform: translateY(30%);
     opacity: 0;
   }
   to {

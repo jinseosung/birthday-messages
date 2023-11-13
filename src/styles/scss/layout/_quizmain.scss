@@ -28,4 +28,14 @@
   .quizmain__btn {
     @include rose-btn;
   }
+
+  .opacity-1 {
+    opacity: 1;
+    transition: all 0.2s ease-in;
+  }
+
+  .opacity-0 {
+    opacity: 0;
+    cursor: default;
+  }
 }

@@ -9,6 +9,7 @@
 
   .message__title {
     @include title-3D;
+    animation: show-from-left 0.9s ease-in-out;
 
     &::after {
       @include text-underline;
@@ -30,11 +31,16 @@
     margin-bottom: 1.3rem;
     outline: none;
     @include transparent-board(solid 2px rgba(182, 182, 201, 0.3));
+    animation: show-from-bottom 0.9s ease-in-out;
   }
 
   .message__nameContainer {
     text-align: end;
     margin-bottom: 1.7rem;
+
+    label {
+      animation: show-from-bottom-delay-60 0.9s ease-in-out;
+    }
 
     .message__nameInput {
       margin-left: 0.4rem;
@@ -44,6 +50,7 @@
       border-radius: 25px;
       color: black;
       @include transparent-board(none);
+      animation: show-from-bottom-delay-60 0.9s ease-in-out;
 
       &::placeholder {
         color: #3a3a3a;
@@ -53,5 +60,6 @@
 
   .message__btn {
     @include rose-btn;
+    animation: show-from-bottom-delay-80 0.9s ease-in-out;
   }
 }

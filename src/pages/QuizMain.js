@@ -21,7 +21,7 @@ const QuizMain = () => {
         value={name}
         onChange={(e) => setName(e.target.value)}
       />
-      <button onClick={handleNameSubmit} className="quizmain__btn">Start Quiz 🔍</button>
+      <button onClick={handleNameSubmit} className={name?`quizmain__btn opacity-1`:`quizmain__btn opacity-0`}>Start Quiz 🔍</button>
     </div>
   );
 };

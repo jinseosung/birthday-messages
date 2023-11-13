@@ -12,9 +12,6 @@ const SelectLan = ({ datas }) => {
           <BtnTransparent prop={data.lan} />
         </Link>
       ))}
-      <Link to={`${process.env.PUBLIC_URL}/messages`}>
-        <BtnTransparent prop={`📫`} />
-      </Link>
     </div>
   );
 };

@@ -33,11 +33,11 @@ body {
 }
 @keyframes show-from-bottom-delay-60 {
   from {
-    transform: translateY(30%);
+    transform: translateY(40%);
     opacity: 0;
   }
-  60% {
-    transform: translateY(30%);
+  40% {
+    transform: translateY(40%);
     opacity: 0;
   }
   to {
@@ -50,7 +50,7 @@ body {
     transform: translateY(30%);
     opacity: 0;
   }
-  80% {
+  50% {
     transform: translateY(30%);
     opacity: 0;
   }

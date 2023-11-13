@@ -29,5 +29,10 @@
 
   .thx__btn {
     @include rose-btn;
+    animation: show-from-bottom 0.9s ease-in-out;
+  }
+
+  .thx__btn-2 {
+    animation: show-from-bottom-delay-60 0.9s ease-in-out;
   }
 }

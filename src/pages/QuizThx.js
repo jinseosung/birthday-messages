@@ -1,8 +1,8 @@
 import {
   collection,
   query,
-  orderBy,
-  limit,
+  // orderBy,
+  where,
   onSnapshot,
 } from "firebase/firestore";
 import { db } from "../firebase";
@@ -10,8 +10,11 @@ import { useState } from "react";
 
 const QuizThx = () => {
   const [classementList, setClassementList] = useState([]);
-  const emojis = ["🥇", "🥈", "🥉", "🏅", "🎖"];
-  const q = query(collection(db, "score"), orderBy("score", "desc"), limit(5));
+  const q = query(
+    collection(db, "score"),
+    // orderBy("score", "desc"),
+    where("score", "==", 5)
+  );
   onSnapshot(q, (querySnapshot) => {
     const classements = [];
     querySnapshot.forEach((doc) => {
@@ -26,7 +29,7 @@ const QuizThx = () => {
       <ul className="quizthx__classement">
         {classementList.map((classement, index) => (
           <li key={index} className="quizthx__class">
-            {emojis[index]} {classement.name}
+            🏆 {classement.name}
           </li>
         ))}
       </ul>

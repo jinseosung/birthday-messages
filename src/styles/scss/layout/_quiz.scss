@@ -1,5 +1,5 @@
 .quiz {
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,6 +8,7 @@
 
   .quiz__qustion {
     @include title-3D;
+    margin: 0;
   }
 
   .quiz__answers {

@@ -9,7 +9,7 @@ const QuizMain = () => {
     if (!name) {
       return;
     }
-    navigate(`${process.env.PUBLIC_URL}/quiz/${name}`);
+    navigate(`/quiz/${name}`);
   };
 
   return (

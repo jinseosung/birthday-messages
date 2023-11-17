@@ -20,7 +20,7 @@ const Messages = () => {
   return (
     <div className="messasges">
       <div className="messages__link">
-        <Link to={`${process.env.PUBLIC_URL}/`} className="messages__btn">
+        <Link to={`/`} className="messages__btn">
           <FontAwesomeIcon icon={faHouse} className="messages__icon" />
         </Link>
       </div>

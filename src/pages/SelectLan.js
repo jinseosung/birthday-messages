@@ -7,7 +7,7 @@ const SelectLan = ({ datas }) => {
       {datas.map((data) => (
         <Link
           key={data.id}
-          to={`${process.env.PUBLIC_URL}/message/${data.lanCode}`}
+          to={`/message/${data.lanCode}`}
         >
           <BtnTransparent prop={data.lan} />
         </Link>

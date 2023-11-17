@@ -12,34 +12,34 @@ import datas from "./datas/texts.json";
 
 const router = createBrowserRouter([
   {
-    path: `${process.env.PUBLIC_URL}/`,
+    path: `/`,
     element: <Home datas={datas} />,
   },{
-    path: `${process.env.PUBLIC_URL}/lan`,
+    path: `/lan`,
     element: <SelectLan datas={datas} />,
   },
   {
-    path: `${process.env.PUBLIC_URL}/message/:languageId`,
+    path: `/message/:languageId`,
     element: <Message datas={datas} />,
   },
   {
-    path: `${process.env.PUBLIC_URL}/thx/:languageId`,
+    path: `/thx/:languageId`,
     element: <Thx datas={datas} />,
   },
   {
-    path: `${process.env.PUBLIC_URL}/messages`,
+    path: `/messages`,
     element: <Messages />,
   },
   {
-    path: `${process.env.PUBLIC_URL}/quiz/:name`,
+    path: `/quiz/:name`,
     element: <Quiz />,
   },
   {
-    path: `${process.env.PUBLIC_URL}/quizmain`,
+    path: `/quizmain`,
     element: <QuizMain />,
   },
   {
-    path: `${process.env.PUBLIC_URL}/quizthx`,
+    path: `/quizthx`,
     element: <QuizThx />,
   },
 ]);

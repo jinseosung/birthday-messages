@@ -16,10 +16,10 @@ const Thx = ({ datas }) => {
     return (
       <div className="thx">
         <h1 className="thx__title">{thx.title}</h1>
-        <Link to={`${process.env.PUBLIC_URL}/messages`}>
+        <Link to={`/messages`}>
           <button className="thx__btn">{thx.btn}</button>
         </Link>
-        <Link to={`${process.env.PUBLIC_URL}/quizmain`}>
+        <Link to={`/quizmain`}>
           <button className="thx__btn thx__btn-2">{thx.quiz}</button>
         </Link>
       </div>

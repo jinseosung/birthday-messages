@@ -4,13 +4,13 @@ import BtnTransparent from "../components/BtnTransparent";
 const Home = ({ datas }) => {
   return (
     <div className="home">
-      <Link to={`${process.env.PUBLIC_URL}/lan`}>
+      <Link to={`/lan`}>
         <BtnTransparent prop={"💌"} />
       </Link>
-      <Link to={`${process.env.PUBLIC_URL}/quizmain`}>
+      <Link to={`/quizmain`}>
         <BtnTransparent prop={"🔍"} />
       </Link>
-      <Link to={`${process.env.PUBLIC_URL}/messages`}>
+      <Link to={`/messages`}>
         <BtnTransparent prop={"📫"} />
       </Link>
     </div>

@@ -41,7 +41,7 @@ const Quiz = () => {
         saveScore(0)
       }
 
-      navigate(`${process.env.PUBLIC_URL}/quizthx`);
+      navigate(`/quizthx`);
     }
   };
 

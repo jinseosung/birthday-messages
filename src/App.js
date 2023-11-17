@@ -9,12 +9,14 @@ import Quiz from "./pages/Quiz";
 import QuizThx from "./pages/QuizThx";
 import "./styles/main.css";
 import datas from "./datas/texts.json";
+import QuizResult from "./pages/QuizResult";
 
 const router = createBrowserRouter([
   {
     path: `/`,
     element: <Home datas={datas} />,
-  },{
+  },
+  {
     path: `/lan`,
     element: <SelectLan datas={datas} />,
   },
@@ -41,6 +43,10 @@ const router = createBrowserRouter([
   {
     path: `/quizthx`,
     element: <QuizThx />,
+  },
+  {
+    path: `/quizresult`,
+    element: <QuizResult />,
   },
 ]);
 

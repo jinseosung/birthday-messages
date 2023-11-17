@@ -1,3 +1,9 @@
-export default function BtnTransparent({ prop }) {
-  return <button className="btnTransparent">{prop}</button>;
+export default function BtnTransparent({ prop, prop2 }) {
+  return (
+    <button className="btnTransparent">
+      {prop}
+      <br />
+      {prop2}
+    </button>
+  );
 }

@@ -133,6 +133,7 @@ body {
   margin-bottom: 0.7rem;
   outline: none;
   border: solid 2px rgba(182, 182, 201, 0.3);
+  color: white;
   background-color: rgba(190, 190, 221, 0.3);
   backdrop-filter: blur(10px);
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
@@ -153,6 +154,7 @@ body {
   border-radius: 25px;
   color: black;
   border: none;
+  color: white;
   background-color: rgba(190, 190, 221, 0.3);
   backdrop-filter: blur(10px);
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
@@ -205,9 +207,11 @@ body {
   flex-direction: column;
   border-radius: 15px;
   border: none;
+  color: white;
   background-color: rgba(190, 190, 221, 0.3);
   backdrop-filter: blur(10px);
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  color: #000000;
 }
 .messasges .messages__container .messages__top {
   display: flex;
@@ -317,6 +321,7 @@ body {
   border-radius: 30px;
   padding: 1.5rem 0.5rem;
   border: solid 2px rgba(182, 182, 201, 0.3);
+  color: white;
   background-color: rgba(190, 190, 221, 0.3);
   backdrop-filter: blur(10px);
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
@@ -375,6 +380,7 @@ body {
   font-size: 1.3rem;
   font-weight: 700;
   border: none;
+  color: white;
   background-color: rgba(190, 190, 221, 0.3);
   backdrop-filter: blur(10px);
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
@@ -438,6 +444,7 @@ body {
   padding: 1rem;
   border-radius: 30px;
   border: solid 2px rgba(182, 182, 201, 0.3);
+  color: white;
   background-color: rgba(190, 190, 221, 0.3);
   backdrop-filter: blur(10px);
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
@@ -447,15 +454,19 @@ body {
 .btnTransparent {
   padding: 1.7rem;
   border-radius: 30px;
-  font-size: 2rem;
+  font-size: 1.4rem;
   width: 100%;
   cursor: pointer;
   color: black;
   border: solid 2px rgba(182, 182, 201, 0.3);
+  color: white;
   background-color: rgba(190, 190, 221, 0.3);
   backdrop-filter: blur(10px);
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
   animation: fade-in-out 0.9s ease-in-out;
+}
+.btnTransparent span {
+  font-size: 0.9rem;
 }
 
 /*# sourceMappingURL=main.css.map */

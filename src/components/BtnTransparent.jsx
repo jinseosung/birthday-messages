@@ -3,7 +3,7 @@ export default function BtnTransparent({ prop, prop2 }) {
     <button className="btnTransparent">
       {prop}
       <br />
-      {prop2}
+      <span>{prop2}</span>
     </button>
   );
 }

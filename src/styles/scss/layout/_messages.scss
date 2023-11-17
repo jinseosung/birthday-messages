@@ -30,6 +30,7 @@ $font-size: 1.1rem;
     flex-direction: column;
     border-radius: 15px;
     @include transparent-board(none);
+    color: #000000;
 
     .messages__top {
       display: flex;

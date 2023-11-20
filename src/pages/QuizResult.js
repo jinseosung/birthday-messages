@@ -1,3 +1,7 @@
+import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHouse } from "@fortawesome/free-solid-svg-icons";
+
 import {
   collection,
   query,
@@ -6,7 +10,8 @@ import {
   onSnapshot,
 } from "firebase/firestore";
 import { db } from "../firebase";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import Carousel from "../components/Carousel";
 
 const QuizResult = () => {
   const [score5ClassmentList, score5setClassementList] = useState([]);
@@ -25,88 +30,110 @@ const QuizResult = () => {
   const score2 = query(collection(db, "score"), where("score", "==", 2));
   const score1 = query(collection(db, "score"), where("score", "==", 1));
   const score0 = query(collection(db, "score"), where("score", "==", 0));
-  onSnapshot(score5, (querySnapshot) => {
-    const classements = [];
-    querySnapshot.forEach((doc) => {
-      classements.push(doc.data());
-      score5setClassementList(classements);
+
+  useEffect(() => {
+    onSnapshot(score5, (querySnapshot) => {
+      const classements = [];
+      querySnapshot.forEach((doc) => {
+        classements.push(doc.data());
+        score5setClassementList(classements);
+      });
     });
-  });
-  onSnapshot(score4, (querySnapshot) => {
-    const classements = [];
-    querySnapshot.forEach((doc) => {
-      classements.push(doc.data());
-      score4setClassementList(classements);
+    onSnapshot(score4, (querySnapshot) => {
+      const classements = [];
+      querySnapshot.forEach((doc) => {
+        classements.push(doc.data());
+        score4setClassementList(classements);
+      });
     });
-  });
-  onSnapshot(score3, (querySnapshot) => {
-    const classements = [];
-    querySnapshot.forEach((doc) => {
-      classements.push(doc.data());
-      score3setClassementList(classements);
+    onSnapshot(score3, (querySnapshot) => {
+      const classements = [];
+      querySnapshot.forEach((doc) => {
+        classements.push(doc.data());
+        score3setClassementList(classements);
+      });
     });
-  });
-  onSnapshot(score2, (querySnapshot) => {
-    const classements = [];
-    querySnapshot.forEach((doc) => {
-      classements.push(doc.data());
-      score2setClassementList(classements);
+    onSnapshot(score2, (querySnapshot) => {
+      const classements = [];
+      querySnapshot.forEach((doc) => {
+        classements.push(doc.data());
+        score2setClassementList(classements);
+      });
     });
-  });
-  onSnapshot(score1, (querySnapshot) => {
-    const classements = [];
-    querySnapshot.forEach((doc) => {
-      classements.push(doc.data());
-      score1setClassementList(classements);
+    onSnapshot(score1, (querySnapshot) => {
+      const classements = [];
+      querySnapshot.forEach((doc) => {
+        classements.push(doc.data());
+        score1setClassementList(classements);
+      });
     });
-  });
-  onSnapshot(score0, (querySnapshot) => {
-    const classements = [];
-    querySnapshot.forEach((doc) => {
-      classements.push(doc.data());
-      score0setClassementList(classements);
+    onSnapshot(score0, (querySnapshot) => {
+      const classements = [];
+      querySnapshot.forEach((doc) => {
+        classements.push(doc.data());
+        score0setClassementList(classements);
+      });
     });
-  });
+  }, [score0, score1, score2, score3, score4, score5]);
 
   return (
     <div className="quizresult">
-      <span>5️⃣</span>
+      <div className="quizresult__link">
+        <Link to={`/`} className="quizresult__btn">
+          <FontAwesomeIcon icon={faHouse} className="quizresult__icon" />
+        </Link>
+      </div>
+      <Carousel />
+      <div className="down-arrow"></div>
       <ul className="quizresult__classement">
-        {score5ClassmentList.map((classement, index) => (
-          <li key={index} className="quizresult__class">
-            {classement.name}
-          </li>
-        ))}
-        <span>4️⃣</span>
-        {score4ClassmentList.map((classement, index) => (
-          <li key={index} className="quizresult__class">
-            {classement.name}
-          </li>
-        ))}
-        <span>3️⃣</span>
-        {score3ClassmentList.map((classement, index) => (
-          <li key={index} className="quizresult__class">
-            {classement.name}
-          </li>
-        ))}
-        <span>2️⃣</span>
-        {score2ClassmentList.map((classement, index) => (
-          <li key={index} className="quizresult__class">
-            {classement.name}
-          </li>
-        ))}
-        <span>1️⃣</span>
-        {score1ClassmentList.map((classement, index) => (
-          <li key={index} className="quizresult__class">
-            {classement.name}
-          </li>
-        ))}
-        <span>0️⃣</span>
-        {score0ClassmentList.map((classement, index) => (
-          <li key={index} className="quizresult__class">
-            {classement.name}
-          </li>
-        ))}
+        <li className="quizresult__li">
+          <span className="quizresult__title">🥇 Score 5</span>
+          <div className="quizresult__class">
+            {score5ClassmentList.map((classement, index) => (
+              <span key={index}>{classement.name}</span>
+            ))}
+          </div>
+        </li>
+        <li className="quizresult__li">
+          <span className="quizresult__title">🥈 Score 4</span>
+          <div className="quizresult__class">
+            {score4ClassmentList.map((classement, index) => (
+              <span key={index}>{classement.name}</span>
+            ))}
+          </div>
+        </li>
+        <li className="quizresult__li">
+          <span className="quizresult__title">🥉 Score 3</span>
+          <div className="quizresult__class">
+            {score3ClassmentList.map((classement, index) => (
+              <span key={index}>{classement.name}</span>
+            ))}
+          </div>
+        </li>
+        <li className="quizresult__li">
+          <span className="quizresult__title">🏅 Score 2</span>
+          <div className="quizresult__class">
+            {score2ClassmentList.map((classement, index) => (
+              <span key={index}>{classement.name}</span>
+            ))}
+          </div>
+        </li>
+        <li className="quizresult__li">
+          <span className="quizresult__title">🎖 Score 1</span>
+          <div className="quizresult__class">
+            {score1ClassmentList.map((classement, index) => (
+              <span key={index}>{classement.name}</span>
+            ))}
+          </div>
+        </li>
+        <li className="quizresult__li">
+          <span className="quizresult__title">Score 0 😅</span>
+          <div className="quizresult__class">
+            {score0ClassmentList.map((classement, index) => (
+              <span key={index}>{classement.name}</span>
+            ))}
+          </div>
+        </li>
       </ul>
     </div>
   );

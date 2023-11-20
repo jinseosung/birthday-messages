@@ -87,7 +87,7 @@ const QuizResult = () => {
       <div className="down-arrow"></div>
       <ul className="quizresult__classement">
         <li className="quizresult__li">
-          <span className="quizresult__title">🥇 Score 5</span>
+          <span className="quizresult__title">🥇 5 points</span>
           <div className="quizresult__class">
             {score5ClassmentList.map((classement, index) => (
               <span key={index}>{classement.name}</span>
@@ -95,7 +95,7 @@ const QuizResult = () => {
           </div>
         </li>
         <li className="quizresult__li">
-          <span className="quizresult__title">🥈 Score 4</span>
+          <span className="quizresult__title">🥈 4 points</span>
           <div className="quizresult__class">
             {score4ClassmentList.map((classement, index) => (
               <span key={index}>{classement.name}</span>
@@ -103,7 +103,7 @@ const QuizResult = () => {
           </div>
         </li>
         <li className="quizresult__li">
-          <span className="quizresult__title">🥉 Score 3</span>
+          <span className="quizresult__title">🥉 3 points</span>
           <div className="quizresult__class">
             {score3ClassmentList.map((classement, index) => (
               <span key={index}>{classement.name}</span>
@@ -111,7 +111,7 @@ const QuizResult = () => {
           </div>
         </li>
         <li className="quizresult__li">
-          <span className="quizresult__title">🏅 Score 2</span>
+          <span className="quizresult__title">🏅 2 points</span>
           <div className="quizresult__class">
             {score2ClassmentList.map((classement, index) => (
               <span key={index}>{classement.name}</span>
@@ -119,7 +119,7 @@ const QuizResult = () => {
           </div>
         </li>
         <li className="quizresult__li">
-          <span className="quizresult__title">🎖 Score 1</span>
+          <span className="quizresult__title">🎖 1 point</span>
           <div className="quizresult__class">
             {score1ClassmentList.map((classement, index) => (
               <span key={index}>{classement.name}</span>
@@ -127,7 +127,7 @@ const QuizResult = () => {
           </div>
         </li>
         <li className="quizresult__li">
-          <span className="quizresult__title">Score 0 😅</span>
+          <span className="quizresult__title">😅 0 point</span>
           <div className="quizresult__class">
             {score0ClassmentList.map((classement, index) => (
               <span key={index}>{classement.name}</span>

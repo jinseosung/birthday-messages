@@ -50,7 +50,7 @@ body {
     transform: translateY(30%);
     opacity: 0;
   }
-  50% {
+  70% {
     transform: translateY(30%);
     opacity: 0;
   }
@@ -242,6 +242,7 @@ body {
 .messasges .messages__container .messages__bottom {
   padding: 1rem;
   font-size: 1.1rem;
+  overflow-wrap: break-word;
 }
 
 .thx {
@@ -255,9 +256,16 @@ body {
   gap: 2rem;
 }
 .thx .thx__title {
-  -webkit-text-fill-color: white;
-  -webkit-text-stroke: 2px black;
+  font-size: 1.7rem;
+  margin: 2rem auto;
+  display: flex;
+  justify-content: center;
+  color: #ffffff;
+  letter-spacing: 0.015em;
+  text-shadow: 0 0 0 #000000, 0.0025em 0.0025em 0 #000000, 0.005em 0.005em 0 #000000, 0.0075em 0.0075em 0 #000000, 0.01em 0.01em 0 #000000, 0.0125em 0.0125em 0 #000000, 0.015em 0.015em 0 #000000, 0.0175em 0.0175em 0 #000000, 0.02em 0.02em 0 #000000, 0.0225em 0.0225em 0 #000000, 0.025em 0.025em 0 #000000, 0.0275em 0.0275em 0 #000000, 0.03em 0.03em 0 #000000, 0.0325em 0.0325em 0 #000000, 0.035em 0.035em 0 #000000, 0.0375em 0.0375em 0 #000000, 0.04em 0.04em 0 #000000, 0.0425em 0.0425em 0 #000000, 0.045em 0.045em 0 #000000, 0.0475em 0.0475em 0 #000000, 0.05em 0.05em 0 #000000, 0.0525em 0.0525em 0 #000000, 0.055em 0.055em 0 #000000, 0.0575em 0.0575em 0 #000000, 0.06em 0.06em 0 #000000, 0.0625em 0.0625em 0 #000000, 0.065em 0.065em 0 #000000, 0.0675em 0.0675em 0 #000000, 0.07em 0.07em 0 #000000, 0.0725em 0.0725em 0 #000000, 0.075em 0.075em 0 #000000, 0.0775em 0.0775em 0 #000000, 0.08em 0.08em 0 #000000, 0.0825em 0.0825em 0 #000000, 0.085em 0.085em 0 #000000, 0.0875em 0.0875em 0 #000000, 0.09em 0.09em 0 #000000, 0.0925em 0.0925em 0 #000000, 0.095em 0.095em 0 #000000, 0.0975em 0.0975em 0 #000000, 0.1em 0.1em 0 #000000;
   position: relative;
+  position: relative;
+  margin-bottom: 0;
 }
 .thx .thx__title::after {
   content: "";
@@ -283,6 +291,9 @@ body {
 }
 .thx .thx__btn-2 {
   animation: show-from-bottom-delay-60 0.9s ease-in-out;
+}
+.thx .thx__btn-3 {
+  animation: show-from-bottom-delay-80 0.9s ease-in-out;
 }
 
 .quizmain {
@@ -410,8 +421,10 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   text-align: center;
   padding: 2rem;
+  gap: 2rem;
 }
 .quizthx .quizthx__title {
   font-size: 1.7rem;
@@ -422,6 +435,21 @@ body {
   letter-spacing: 0.015em;
   text-shadow: 0 0 0 #000000, 0.0025em 0.0025em 0 #000000, 0.005em 0.005em 0 #000000, 0.0075em 0.0075em 0 #000000, 0.01em 0.01em 0 #000000, 0.0125em 0.0125em 0 #000000, 0.015em 0.015em 0 #000000, 0.0175em 0.0175em 0 #000000, 0.02em 0.02em 0 #000000, 0.0225em 0.0225em 0 #000000, 0.025em 0.025em 0 #000000, 0.0275em 0.0275em 0 #000000, 0.03em 0.03em 0 #000000, 0.0325em 0.0325em 0 #000000, 0.035em 0.035em 0 #000000, 0.0375em 0.0375em 0 #000000, 0.04em 0.04em 0 #000000, 0.0425em 0.0425em 0 #000000, 0.045em 0.045em 0 #000000, 0.0475em 0.0475em 0 #000000, 0.05em 0.05em 0 #000000, 0.0525em 0.0525em 0 #000000, 0.055em 0.055em 0 #000000, 0.0575em 0.0575em 0 #000000, 0.06em 0.06em 0 #000000, 0.0625em 0.0625em 0 #000000, 0.065em 0.065em 0 #000000, 0.0675em 0.0675em 0 #000000, 0.07em 0.07em 0 #000000, 0.0725em 0.0725em 0 #000000, 0.075em 0.075em 0 #000000, 0.0775em 0.0775em 0 #000000, 0.08em 0.08em 0 #000000, 0.0825em 0.0825em 0 #000000, 0.085em 0.085em 0 #000000, 0.0875em 0.0875em 0 #000000, 0.09em 0.09em 0 #000000, 0.0925em 0.0925em 0 #000000, 0.095em 0.095em 0 #000000, 0.0975em 0.0975em 0 #000000, 0.1em 0.1em 0 #000000;
   position: relative;
+  animation: show-from-bottom 0.9s ease-in-out;
+  margin-bottom: 0;
+}
+.quizthx .quizthx__btn {
+  border: none;
+  padding: 1.2rem;
+  border-radius: 25px;
+  background-color: #c05b79;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  animation: show-from-bottom-delay-60 0.9s ease-in-out;
+}
+.quizthx .quizthx__btn-2 {
+  animation: show-from-bottom-delay-80 0.9s ease-in-out;
 }
 
 .quizresult {

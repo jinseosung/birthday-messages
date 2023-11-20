@@ -66,6 +66,7 @@ $font-size: 1.1rem;
     .messages__bottom {
       padding: 1rem;
       font-size: $font-size;
+      overflow-wrap: break-word;
     }
   }
 }

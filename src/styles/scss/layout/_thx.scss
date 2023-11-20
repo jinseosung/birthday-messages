@@ -9,9 +9,9 @@
   gap: 2rem;
 
   .thx__title {
-    -webkit-text-fill-color: white;
-    -webkit-text-stroke: 2px black;
+    @include title-3D;
     position: relative;
+    margin-bottom: 0;
 
     &::after {
       content: "";
@@ -34,5 +34,9 @@
 
   .thx__btn-2 {
     animation: show-from-bottom-delay-60 0.9s ease-in-out;
+  }
+
+  .thx__btn-3 {
+    animation: show-from-bottom-delay-80 0.9s ease-in-out;
   }
 }

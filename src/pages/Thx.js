@@ -22,6 +22,9 @@ const Thx = ({ datas }) => {
         <Link to={`/quizmain`}>
           <button className="thx__btn thx__btn-2">{thx.quiz}</button>
         </Link>
+        <Link to={`/`}>
+          <button className="thx__btn  thx__btn-3">Page d'accueil 🎈</button>
+        </Link>
       </div>
     );
   }

@@ -23,7 +23,7 @@ const Thx = ({ datas }) => {
           <button className="thx__btn thx__btn-2">{thx.quiz}</button>
         </Link>
         <Link to={`/`}>
-          <button className="thx__btn  thx__btn-3">Page d'accueil 🎈</button>
+          <button className="thx__btn  thx__btn-3">{thx.main}</button>
         </Link>
       </div>
     );

@@ -16,6 +16,9 @@ const Home = ({ datas }) => {
       <Link to={`/messages`}>
         <BtnTransparent prop={"Livre d'or 📫"} />
       </Link>
+      <Link to={`/quizresult`}>
+        <BtnTransparent prop={"Trophée 🏆"} />
+      </Link>
     </div>
   );
 };

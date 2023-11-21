@@ -4,6 +4,7 @@ import { collection, addDoc } from "firebase/firestore";
 import { db } from "../firebase";
 import { v4 as uuidv4 } from "uuid";
 import questions from "../datas/quiz.json";
+import BtnRose from "../components/BtnRose";
 
 const Quiz = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -36,9 +37,9 @@ const Quiz = () => {
       setSelectedAnswer("");
     } else {
       if (selectedAnswer === currentQuestion.correctAnswer) {
-        saveScore(1)
+        saveScore(1);
       } else {
-        saveScore(0)
+        saveScore(0);
       }
 
       navigate(`/quizthx`);
@@ -66,9 +67,7 @@ const Quiz = () => {
         ))}
       </ul>
       {selectedAnswer && (
-        <button onClick={handleNextQuestion} className="quiz__btn">
-          👉
-        </button>
+        <BtnRose onclick={handleNextQuestion} prop={`👉`} style={`quiz__btn`} />
       )}
     </div>
   );

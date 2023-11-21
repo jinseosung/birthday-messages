@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
+import BtnRose from "../components/BtnRose";
 
 const Thx = ({ datas }) => {
   const [selectedData, setSelectedData] = useState({});
@@ -17,13 +18,13 @@ const Thx = ({ datas }) => {
       <div className="thx">
         <h1 className="thx__title">{thx.title}</h1>
         <Link to={`/messages`}>
-          <button className="thx__btn">{thx.btn}</button>
+          <BtnRose prop={thx.btn} style={`thx__btn`} />
         </Link>
         <Link to={`/quizmain`}>
-          <button className="thx__btn thx__btn-2">{thx.quiz}</button>
+          <BtnRose prop={thx.quiz} style={`thx__btn-2`} />
         </Link>
         <Link to={`/`}>
-          <button className="thx__btn  thx__btn-3">{thx.main}</button>
+          <BtnRose prop={thx.main} style={`thx__btn-3`} />
         </Link>
       </div>
     );

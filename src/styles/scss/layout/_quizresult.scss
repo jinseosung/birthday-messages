@@ -8,16 +8,12 @@
     text-align: end;
 
     .quizresult__btn {
-      @include rose-btn;
       display: inline-block;
       text-align: center;
       font-size: $font-size;
       padding: 0.5rem 0.7rem;
       border-radius: 15px;
-
-      .quizresult__icon {
-        color: #ffffff;
-      }
+      color: #ffffff;
     }
   }
 

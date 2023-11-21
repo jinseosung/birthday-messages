@@ -26,11 +26,6 @@
     animation: fade-in-out 0.9s ease-in-out;
   }
 
-  .quizmain__btn {
-    @include rose-btn;
-    color: #000000;
-  }
-
   .opacity-1 {
     opacity: 1;
     transition: all 0.2s ease-in;

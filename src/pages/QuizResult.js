@@ -12,6 +12,7 @@ import {
 import { db } from "../firebase";
 import { useState, useEffect } from "react";
 import Carousel from "../components/Carousel";
+import BtnRose from "../components/BtnRose";
 
 const QuizResult = () => {
   const [score5ClassmentList, score5setClassementList] = useState([]);
@@ -79,8 +80,11 @@ const QuizResult = () => {
   return (
     <div className="quizresult">
       <div className="quizresult__link">
-        <Link to={`/`} className="quizresult__btn">
-          <FontAwesomeIcon icon={faHouse} className="quizresult__icon" />
+        <Link to={`/`}>
+          <BtnRose
+            prop={<FontAwesomeIcon icon={faHouse} />}
+            style={`quizresult__btn`}
+          />
         </Link>
       </div>
       <Carousel />

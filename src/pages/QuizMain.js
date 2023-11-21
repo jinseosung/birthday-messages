@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import BtnRose from "../components/BtnRose";
 
 const QuizMain = () => {
   const [name, setName] = useState("");
@@ -16,12 +17,16 @@ const QuizMain = () => {
     <div className="quizmain">
       <h1 className="quizmain__title">Ton prénom ?</h1>
       <input
-      className="quizmain__input"
+        className="quizmain__input"
         type="text"
         value={name}
         onChange={(e) => setName(e.target.value)}
       />
-      <button onClick={handleNameSubmit} className={name?`quizmain__btn opacity-1`:`quizmain__btn opacity-0`}>Start Quiz 🔍</button>
+      <BtnRose
+        onclick={handleNameSubmit}
+        prop={`Start Quiz 🔍`}
+        style={name ? `opacity-1` : `opacity-0`}
+      />
     </div>
   );
 };

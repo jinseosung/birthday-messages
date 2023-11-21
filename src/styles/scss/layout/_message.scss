@@ -59,7 +59,6 @@
   }
 
   .message__btn {
-    @include rose-btn;
     animation: show-from-bottom-delay-80 0.9s ease-in-out;
   }
 }

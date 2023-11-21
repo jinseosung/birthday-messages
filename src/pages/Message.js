@@ -3,6 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { collection, addDoc } from "firebase/firestore";
 import { db } from "../firebase";
 import { v4 as uuidv4 } from "uuid";
+import BtnRose from "../components/BtnRose";
 
 const Message = ({ datas }) => {
   const [selectedData, setSelectedData] = useState({});
@@ -85,9 +86,7 @@ const Message = ({ datas }) => {
               required
             />
           </div>
-          <button className="message__btn" type="submit">
-            {message.btn}
-          </button>
+          <BtnRose type="submit" prop={message.btn} style={`message__btn`} />
         </form>
       </div>
     );

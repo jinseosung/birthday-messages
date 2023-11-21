@@ -5,6 +5,7 @@ import { useState } from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHouse, faComment } from "@fortawesome/free-solid-svg-icons";
+import BtnRose from "../components/BtnRose";
 
 const Messages = () => {
   const [messageList, setMessageList] = useState([]);
@@ -20,8 +21,11 @@ const Messages = () => {
   return (
     <div className="messasges">
       <div className="messages__link">
-        <Link to={`/`} className="messages__btn">
-          <FontAwesomeIcon icon={faHouse} className="messages__icon" />
+        <Link to={`/`}>
+          <BtnRose
+            style={`messages__btn`}
+            prop={<FontAwesomeIcon icon={faHouse} />}
+          />
         </Link>
       </div>
       {messageList.map((message) => (

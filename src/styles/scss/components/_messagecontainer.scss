@@ -1,0 +1,45 @@
+.messageContainer {
+  min-height: 14rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  @include transparent-board(none);
+  color: #000000;
+
+  .messageContainer__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.7rem;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 15px 15px 0 0;
+
+    .messageContainer__title {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+
+      .messageContainer__icon {
+        padding: 0.5rem;
+        border-radius: 10px;
+        color: #ffffff;
+        font-size: $font-size;
+        background-color: #c05b79;
+      }
+
+      .messageContainer__name {
+        font-size: 1.2rem;
+      }
+    }
+
+    .messageContainer__date {
+      font-size: 0.9rem;
+    }
+  }
+
+  .messageContainer__bottom {
+    padding: 1rem;
+    font-size: $font-size;
+    overflow-wrap: break-word;
+  }
+}

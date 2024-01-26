@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import BtnTransparent from "../components/BtnTransparent";
 
-const Home = ({ datas }) => {
+const Home = () => {
   return (
     <div className="home">
       <Link to={`/lan`}>

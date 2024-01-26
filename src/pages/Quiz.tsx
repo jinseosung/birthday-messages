@@ -14,7 +14,7 @@ const Quiz = () => {
   const params = useParams();
   const name = params.name;
 
-  const saveScore = async (num) => {
+  const saveScore = async (num: number) => {
     try {
       await addDoc(collection(db, "score"), {
         id: uuidv4(),

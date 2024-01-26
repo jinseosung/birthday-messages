@@ -1,4 +1,5 @@
 type BtnRoseProps = {
+  type?: string;
   prop: string | JSX.Element;
   style: string;
   onclick?: () => void;

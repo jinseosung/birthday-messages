@@ -4,9 +4,16 @@ import { collection, addDoc } from "firebase/firestore";
 import { db } from "../firebase";
 import { v4 as uuidv4 } from "uuid";
 import BtnRose from "../components/BtnRose";
+import { Texts } from "../types/texts";
 
-const Message = ({ datas }) => {
-  const [selectedData, setSelectedData] = useState({});
+type MessageProps = {
+  datas: Texts[];
+};
+
+const Message: React.FC<MessageProps> = ({ datas }) => {
+  const [selectedData, setSelectedData] = useState<Texts | undefined>(
+    undefined
+  );
   const [leavedMessage, setLeavedMessage] = useState("");
   const [name, setName] = useState("");
   const { message } = selectedData || {};
@@ -38,7 +45,9 @@ const Message = ({ datas }) => {
     year: date.getFullYear(),
   };
 
-  const onChange = (e) => {
+  const onChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const target = e.target;
     target.nodeName === "TEXTAREA"
       ? setLeavedMessage(target.value)
@@ -47,10 +56,10 @@ const Message = ({ datas }) => {
 
   useEffect(() => {
     const lanData = datas.find((data) => data.lanCode === lanId);
-    setSelectedData(lanData);
+    lanData && setSelectedData(lanData);
   }, [datas, lanId]);
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     try {

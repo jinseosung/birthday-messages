@@ -14,7 +14,7 @@ import QuizResult from "./pages/QuizResult";
 const router = createBrowserRouter([
   {
     path: `/`,
-    element: <Home datas={datas} />,
+    element: <Home />,
   },
   {
     path: `/lan`,

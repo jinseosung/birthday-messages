@@ -1,16 +1,23 @@
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import BtnRose from "../components/BtnRose";
+import { Texts } from "../types/texts";
 
-const Thx = ({ datas }) => {
-  const [selectedData, setSelectedData] = useState({});
+type ThxProps = {
+  datas: Texts[];
+};
+
+const Thx: React.FC<ThxProps> = ({ datas }) => {
+  const [selectedData, setSelectedData] = useState<Texts | undefined>(
+    undefined
+  );
   const { thx } = selectedData || {};
   const params = useParams();
   const lanId = params.languageId;
 
   useEffect(() => {
     const lanData = datas.find((data) => data.lanCode === lanId);
-    setSelectedData(lanData);
+    lanData && setSelectedData(lanData);
   }, [datas, lanId]);
 
   if (thx) {

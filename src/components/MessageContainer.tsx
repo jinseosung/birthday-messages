@@ -1,7 +1,22 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faComment } from "@fortawesome/free-solid-svg-icons";
 
-export default function MessageContainer({ message }) {
+type MessageContainerProps = {
+  message: {
+    id: string;
+    name: string;
+    message: string;
+    dateObj: {
+      minutes: number;
+      hours: number;
+      day: number;
+      month: string;
+      year: number;
+    };
+  };
+};
+
+const MessageContainer: React.FC<MessageContainerProps> = ({ message }) => {
   return (
     <div key={message.id} className="messageContainer">
       <div className="messageContainer__top">
@@ -21,4 +36,6 @@ export default function MessageContainer({ message }) {
       </div>
     </div>
   );
-}
+};
+
+export default MessageContainer;
